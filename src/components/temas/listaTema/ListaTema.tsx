@@ -54,7 +54,6 @@ function ListaTema() {
             <Box className='temasTitle'>
                 <Typography variant='h2'>Temas</Typography>
             </Box>
-            <ModalTema/>
             <Box className='temaList'>
                 {temas.length <= 0 &&
                     <Box className="fundoPostagem">
