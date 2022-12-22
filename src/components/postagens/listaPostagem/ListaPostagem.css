@@ -1,0 +1,83 @@
+.container-list-post {
+    min-height: 120vh; width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.container-list-post h1 {
+    margin-top: 100px;
+}
+.titulo-list-post {
+    font-weight: bold;
+    font-size: 20px;
+}
+.card {
+    min-width: 60vw;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 1px 1px 4px black;
+}
+.actions-list-post {
+    display: flex;
+    flex-direction: column;
+}
+.content-list-post {
+    display: flex;
+    width: 100%;
+}
+.card-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+.boxCard {
+    width: 100%;
+}
+.user-list-post {
+    background: linear-gradient(rgba(221,20,80,1), rgba(230,128,21,1));
+    padding: 4px;
+    margin-top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img {
+    box-shadow: 1px 1px 5px black;
+    margin-right: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.nome-list-post {
+    color: darkgray;
+}
+.conteudo {
+    border: 1px solid darkgray;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.titulo {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.buttonBox {
+    margin: 5px;
+}
+
+.fundoPostagem {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

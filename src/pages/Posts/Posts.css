@@ -1,0 +1,38 @@
+.linhaOpcoes {
+}
+
+.caixa {
+    
+    z-index: 2;
+}
+
+.fundoImg-postModal {
+    width: 100vw;
+    height: 100%;
+    display: flex;
+}
+.fundoImg-postModal img {
+    width: 100%;
+}
+
+.bemVindoArea {
+    background: linear-gradient(60deg, rgba(230,128,21,.7) 0%,rgba(230,128,21,1) 100%);
+    position: absolute;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 1px 1px 5px black;
+    margin-top: 250px;
+    margin-left: -250px;
+    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.5);
+}
+
+.buttonAreaPosts {
+    display: flex;
+}
+
+.fundoImg-postModal {
+
+}

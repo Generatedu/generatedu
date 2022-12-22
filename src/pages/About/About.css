@@ -1,0 +1,106 @@
+.container-About {
+    color: black;
+    min-height: 100vh; width: 100vw;
+}
+
+.container-About .our-mission {
+    display: flex;
+    width: 60vw;
+    z-index: 1;
+}
+.container-About .our-mission:nth-child(1) {
+    display: flex;
+    width: 60vw;
+    margin-top: 150px;
+    z-index: 1;
+}
+
+.ourMissionArea {
+    min-height: 100vh; width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container-About .our-mission img {
+    width: 350px;
+    border-top-left-radius: 200px;
+    border-top-right-radius: 300px;
+    border-bottom-left-radius: 300px;
+    border-bottom-right-radius: 200px;
+    margin: 50px;
+}
+.integrantes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+}
+.integranteaTitulo {
+    height: 40px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+    border-top: 1px solid black;
+}
+.eachIntegrante {
+    display: flex;
+    width: 60%;
+    justify-content: space-around;
+    margin-bottom: 100px;
+    background: linear-gradient(190deg, rgba(230,128,21,1),rgba(221,20,80,1));
+    padding: 15px;
+    border-radius: 5px;
+}
+.eachIntegranteInfo {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.eachIntegranteInfo div {
+    margin: 5px;
+}
+
+.eachIntegrante img {
+    width: 200px; height: 200px;
+    border-top-left-radius: 200px;
+    border-top-right-radius: 300px;
+    border-bottom-left-radius: 300px;
+    border-bottom-right-radius: 200px;
+}
+
+.memberCurriculo {
+    width: 100px; height: 35px;
+    background-color: rgb(64, 64, 253);
+    color: white;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.conteudoAbout {
+    
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh; width: 100vw;
+    z-index: 1;
+}
+.transparentAbout {
+    width: 100vw; height: 100vh;
+    position: fixed;
+    background-color: rgba(255,255,255,.8);
+    z-index: 1;
+}
+.fundoAboutImg img {
+    width: 100vw; height: 100vh;
+    position: fixed;
+    z-index: 0;
+}

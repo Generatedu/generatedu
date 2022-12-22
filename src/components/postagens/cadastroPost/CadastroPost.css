@@ -1,0 +1,12 @@
+.topo {
+    min-height: 100vh; width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form-update-post {
+    border: 1px solid gray;
+    padding: 10px;
+    width: 50%;
+    margin-left: 25%;
+}

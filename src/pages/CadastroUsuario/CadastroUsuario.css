@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Nixie+One&family=Oswald:wght@300&display=swap');
+
+.container {
+    background-color: white;
+    width: 100vw; min-height: 100vh;
+    display: flex; justify-content: center; align-items: center; flex-direction: column;
+    font-family: 'Nixie One', cursive;
+    font-family: 'Oswald', sans-serif;
+    color: white;
+}
+
+.signup {
+    width: 40vw; min-height: 90vh;
+    background: linear-gradient(rgba(221,20,80,.8), rgba(230,128,21,.8));
+    display: flex;
+    box-shadow: 1px 1px 5px black;
+    margin-left: 50%;
+    z-index: 4;
+}
+
+.contact .logoArea {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: radial-gradient(circle, rgb(146, 2, 159) 35%, rgb(112, 0, 104) 100%);
+}
+
+.logoArea img {
+    width: 70%;
+}
+
+.cadastroArea {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cadastroArea img {
+    width: 30%;
+}
+
+.cadastroArea form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cadastroArea form .buttonCadastro {
+    height: 30px;
+    width: 150px;
+    border: none;
+    background:  rgba(230,128,21,1);
+    border-radius: 2px;
+    transition: all ease-in .2s;
+    margin: 10px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.cadastroArea form .buttonCadastro:hover {
+    background:  rgb(196, 102, 1);
+}
+
+textarea {
+    height: 150px; width: 200px;
+}
+
+.fundoPreto {
+    position: absolute;
+    z-index: 3;
+    background: linear-gradient(90deg, rgba(0,0,0,0) 20%, white, white);
+    width: 100vw; height: 100vh;
+}
+
+.fundoPreto img {
+    position: fixed;
+}
+
+.imagemCadastro {
+    position: absolute;
+    z-index: 2;
+    width: 80vw; height: 100vh;
+    display: flex;
+    margin-right: 21%;
+}
+.imagemCadastro img {
+    width: 100%; height: 100%;
+}
+
+.btnCancelar {
+    height: 30px; width: 100px;
+    background-color: brown;
+    box-shadow: 1px 1px 3px rgba(0,0,0,.5);
+    border-radius: 2px;
+}
+
+.cadastroControler {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cadastroArea .inputArea {
+    height: 100%;
+    margin: 10px;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+}

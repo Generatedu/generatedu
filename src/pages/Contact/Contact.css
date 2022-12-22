@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Nixie+One&family=Oswald:wght@300&display=swap');
+
+.container-contato {
+    background-color: white;
+    width: 100vw; min-height: 110vh;
+    display: flex; justify-content: center; align-items: center;
+    font-family: 'Nixie One', cursive;
+    font-family: 'Oswald', sans-serif;
+    color: white;
+}
+
+.contact {
+    width: 50vw; height: 80vh;
+    background: radial-gradient(circle, rgb(241, 130, 10) 35%, rgba(230,128,21,1) 100%);
+    display: flex;
+    box-shadow: 1px 1px 5px black;
+    color: black;
+}
+
+.contact .logoArea {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(rgba(221,20,80,1), rgba(230,128,21,1));
+}
+
+.contatoArea {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contatoArea form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contatoArea form .button {
+    height: 30px;
+    width: 100px;
+    border: none;
+    background: rgb(6, 140, 181);
+    border-radius: 2px;
+    transition: all ease-in .2s;
+    margin: 10px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.contatoArea form .button:hover {
+    background: rgb(28, 159, 199);
+}
+
+.contatoArea .input {
+    height: 30px;
+    margin: 10px;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    border-bottom: 2px solid black;
+    box-shadow: 1px 1px 1px black;
+    color: black;
+}
+
+.textarea {
+    height: 150px;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    border-bottom: 2px solid black;
+    border-top: none; border-left: none; border-right: none;
+    box-shadow: 1px 1px 1px black;
+    color: black;
+}

@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Nixie+One&family=Oswald:wght@300&display=swap');
+
+.nav {
+    width: 100vw;
+    background: linear-gradient(rgba(221,20,80,1), rgba(230,128,21,1));
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+    font-family: 'Nixie One', cursive;
+    font-family: 'Oswald', sans-serif;
+    position: fixed;
+    z-index: 10;
+}
+
+
+.nav .logo img {
+    height: 60px;
+}
+
+.nav ul {
+    display: flex;
+}
+
+.nav ul .a {
+    text-decoration: none;
+    margin: 30px;
+    height: 60px;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all ease-in .3s;
+    color: white;
+}
+.nav ul .a:hover {
+    background: rgb(255, 255, 255);
+    border-radius: 5px;
+    color: #9C0E0E;
+
+}
+
+.nav ul li {
+    list-style: none;
+}
+
+.nav .input {
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+}
