@@ -94,42 +94,46 @@ function CadastroPost() {
     async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
         e.preventDefault()
 
-        if (id !== undefined) {
-            put(`/postagens`, postagem, setPostagem, {
-                headers: {
-                    'Authorization': token
-                }
-            })
+        try {
+            if (id !== undefined) {
+                put(`/postagens`, postagem, setPostagem, {
+                    headers: {
+                        'Authorization': token
+                    }
+                })
 
-            toast.success('Postagem atualizada com sucesso', {
-                position: "top-right",
-                autoClose: 2000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: false,
-                draggable: false,
-                theme: "colored",
-                progress: undefined,
-            });
-        } else {
-            post(`/postagens`, postagem, setPostagem, {
-                headers: {
-                    'Authorization': token
-                }
-            })
+                toast.success('Postagem atualizada com sucesso', {
+                    position: "top-right",
+                    autoClose: 2000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: false,
+                    draggable: false,
+                    theme: "colored",
+                    progress: undefined,
+                });
+            } else {
+                post(`/postagens`, postagem, setPostagem, {
+                    headers: {
+                        'Authorization': token
+                    }
+                })
 
-            toast.success('Postagem cadastrada com sucesso', {
-                position: "top-right",
-                autoClose: 2000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: false,
-                draggable: false,
-                theme: "colored",
-                progress: undefined,
-            });
+                toast.success('Postagem cadastrada com sucesso', {
+                    position: "top-right",
+                    autoClose: 2000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: false,
+                    draggable: false,
+                    theme: "colored",
+                    progress: undefined,
+                });
+            }
+            back()
+        } catch (err) {
+            console.log('erro ao criar a postagem')
         }
-        back()
 
     }
 

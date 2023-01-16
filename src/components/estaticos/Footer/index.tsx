@@ -29,24 +29,28 @@ const Footer = () => {
     if(token != ""){
         footercomponent = <Box className='footer'>
         <Box className='links'>
-            <h3>Links Uteis</h3>
+            <h3>- Links Uteis -</h3>
             {navigation.map((item, index) => (
                 <Link to={item.href} key={index}>{item.nome}</Link>
             ))}
         </Box>
+
+        <Box className='line'></Box>
         
         <Box className='middle'>
         <img src="https://cdn.discordapp.com/attachments/1022847836406165517/1049076028527616002/c-removebg-preview.png" alt="" className="logo" />
         <Box className='direitos'>&copy; Todos os direitos Reservados para GeneratEdu</Box>
         </Box>
 
+        <Box className='line'></Box>
+        
         <Box className='contato'>
 
             <Box className='redesSociais'>
                 <h3>Contate-nos</h3>
                 <p></p>
                 {redesSociais.map((item, index) => (
-                    <a href={item.link} target="_blank"><img src={item.img} alt="" key={index}/></a>
+                    <a href={item.link} target="_blank" key={index}><img src={item.img} alt="" /></a>
                 ))}
             </Box>
         </Box>

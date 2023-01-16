@@ -48,6 +48,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    text-align: center;
 }
 
 .cadastroArea form .buttonCadastro {
@@ -114,4 +115,29 @@ textarea {
     border: none;
     border-radius: 5px;
     padding: 5px;
+}
+
+@media (max-width: 700px) {
+    .signup {
+        width: 90vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 10px
+    }
+
+    .imagemCadastro {
+        width: 100%;
+    }
+
+    .container {
+        background-color: red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .fundoPreto img {
+        display: none;
+    }
 }

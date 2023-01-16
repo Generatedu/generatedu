@@ -1,6 +1,8 @@
 .container-About {
     color: black;
-    min-height: 100vh; width: 100vw;
+    min-height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
 }
 
 .container-About .our-mission {
@@ -8,6 +10,7 @@
     width: 60vw;
     z-index: 1;
 }
+
 .container-About .our-mission:nth-child(1) {
     display: flex;
     width: 60vw;
@@ -16,7 +19,8 @@
 }
 
 .ourMissionArea {
-    min-height: 100vh; width: 100vw;
+    min-height: 100vh;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,6 +35,7 @@
     border-bottom-right-radius: 200px;
     margin: 50px;
 }
+
 .integrantes {
     display: flex;
     justify-content: center;
@@ -38,6 +43,7 @@
     flex-direction: column;
     z-index: 1;
 }
+
 .integranteaTitulo {
     height: 40px;
     width: 100vw;
@@ -47,27 +53,57 @@
     margin-bottom: 100px;
     border-top: 1px solid black;
 }
+
 .eachIntegrante {
     display: flex;
     width: 60%;
     justify-content: space-around;
     margin-bottom: 100px;
-    background: linear-gradient(190deg, rgba(230,128,21,1),rgba(221,20,80,1));
+    background: linear-gradient(190deg, rgba(230, 128, 21, 1), rgba(221, 20, 80, 1));
     padding: 15px;
     border-radius: 5px;
 }
+.eachIntegrante2 {
+    display: flex;
+    width: 60%;
+    justify-content: space-around;
+    margin-bottom: 100px;
+    background: linear-gradient(190deg, rgba(230, 128, 21, 1), rgba(221, 20, 80, 1));
+    padding: 15px;
+    border-radius: 5px;
+}
+
 .eachIntegranteInfo {
     display: flex;
     flex-direction: column;
     margin-left: 20px;
     margin-right: 20px;
 }
+.eachIntegrante2Info {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
 .eachIntegranteInfo div {
+    margin: 5px;
+}
+.eachIntegrante2Info div {
     margin: 5px;
 }
 
 .eachIntegrante img {
-    width: 200px; height: 200px;
+    width: 200px;
+    height: 200px;
+    border-top-left-radius: 200px;
+    border-top-right-radius: 300px;
+    border-bottom-left-radius: 300px;
+    border-bottom-right-radius: 200px;
+}
+.eachIntegrante2 img {
+    width: 200px;
+    height: 200px;
     border-top-left-radius: 200px;
     border-top-right-radius: 300px;
     border-bottom-left-radius: 300px;
@@ -75,7 +111,8 @@
 }
 
 .memberCurriculo {
-    width: 100px; height: 35px;
+    width: 100px;
+    height: 35px;
     background-color: rgb(64, 64, 253);
     color: white;
     border-radius: 3px;
@@ -83,24 +120,67 @@
     justify-content: center;
     align-items: center;
 }
+
 .conteudoAbout {
-    
+
     color: black;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    min-height: 100vh; width: 100vw;
+    min-height: 100vh;
+    width: 100vw;
     z-index: 1;
 }
+
 .transparentAbout {
-    width: 100vw; height: 100vh;
+    width: 100vw;
+    height: 100vh;
     position: fixed;
-    background-color: rgba(255,255,255,.8);
+    background-color: rgba(255, 255, 255, .8);
     z-index: 1;
 }
+
 .fundoAboutImg img {
-    width: 100vw; height: 100vh;
+    width: 100vw;
+    height: 100vh;
     position: fixed;
     z-index: 0;
+}
+.eachIntegrante2 {
+    display: none;
+}
+
+@media (max-width: 700px) {
+
+    .container-About .our-mission {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .container-About .our-mission:nth-child(2) img {
+        display: none;
+    }
+    .eachIntegrante2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+    }
+    .eachIntegrante2 div {
+        width: 90%;
+    }
+    .eachIntegrante {
+        display: none;
+    }
+    .integranteDescricao {
+        overflow: hidden;
+    }
+    .readMore {
+        width: 100%;
+        text-align: center;
+        color: white;
+        text-decoration-line: underline;
+    }
 }

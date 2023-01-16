@@ -1,10 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './About.css';
 import { Box, Typography } from '@mui/material';
 import { Collections } from '@mui/icons-material';
 import { integrantes } from '../../utils/integrantes';
 
 const About = () => {
+
+    const [heightDesc, setHeightDesc] = useState('200px')
+    const [leia, setLeia] = useState('Leia mais...')
+
+    const changeText = () => {
+        if(heightDesc == '200px' && leia === 'Leia mais...') {
+            setHeightDesc('')
+            setLeia('Leia menos...')
+        } else {
+            setHeightDesc('200px')
+            setLeia('Leia mais...')
+        }
+    }
 
     return (
         <Box className='container-About' data-aos="fade-up">
@@ -51,7 +64,7 @@ const About = () => {
                         <>
                             {
                                 item.id % 2 == 0 ?
-                                    <Box className='eachIntegrante'>
+                                    <Box className='eachIntegrante' key={index}>
                                         <Box>
                                             <img src={item.img} alt="" />
                                         </Box>
@@ -69,7 +82,7 @@ const About = () => {
                                         </Box>
                                     </Box>
                                     :
-                                    <Box className='eachIntegrante'>
+                                    <Box className='eachIntegrante'  key={index}>
 
                                         <Box className='eachIntegranteInfo'>
                                             <Typography variant='h5'>{item.name}</Typography>
@@ -89,6 +102,27 @@ const About = () => {
                                         </Box>
                                     </Box>
                             }
+                            <Box className='eachIntegrante2' key={index}>
+                                <Box>
+                                    <img src={item.img} alt="" />
+                                </Box>
+                                <Box className='eachIntegranteInfo'>
+                                    <Typography variant='h5'>{item.name}</Typography>
+                                    <Box className='integranteDescricao' style={{height: heightDesc}}>
+                                        <p>{item.descricao}</p>
+                                    </Box>
+                                    <Box className='readMore' onClick={() => changeText()}>
+                                        {leia}
+                                    </Box>
+                                    <Box className='memberCurriculo'>
+                                        <a href={item.linkedin} target="_blank">Linkedin</a>
+                                    </Box>
+
+                                    <Box className='memberCurriculo'>
+                                        <a href={item.github} target="_blank">Github</a>
+                                    </Box>
+                                </Box>
+                            </Box>
                         </>
                     ))}
                 </Box>

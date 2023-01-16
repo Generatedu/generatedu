@@ -43,6 +43,7 @@ const Apresentacao = () => {
                 <Typography variant='h6'>Uma rede social que motiva alunos e professores a compartilharem idéias e ensinamentos.</Typography>
                 <Link to="/postagem" className="linkPost"><Box className='showPost'>Ver Postagens</Box></Link>
             </Box>
+            <img className='homeImg' src="https://media.discordapp.net/attachments/1012745470659010570/1054415218903634000/Leitura_Brasil_Header.webp" alt="" />
             <Box className='hHome'>
                 <Box className='generateduBox'>
                     <Typography variant='h3'>Somos a Generatedu</Typography>
@@ -89,8 +90,9 @@ const Apresentacao = () => {
                 </Link>
                 <Box className='quadrado'></Box>
             </Box>
+
             <Box className='livros-home'>
-                <Box>
+                <Box className='bookImg'>
                     <img src="https://conteudo.imguol.com.br/c/entretenimento/9d/2019/04/22/como-voce-vai-comemorar-o-dia-do-livro-1555959523311_v2_450x450.jpg" alt="" className='lendo-livro' />
                 </Box>
                 <Box className='livros-img'>
@@ -100,9 +102,9 @@ const Apresentacao = () => {
                     <Typography gutterBottom variant="h6">
                         Livros que expandem o conhecimento
                     </Typography>
-                    <Box style={{ display: 'flex' }}>
+                    <Box className='booksArea'>
                         {books.map((item, index) => (
-                            <Box className='livros'>
+                            <Box className='livros' key={index}>
                                 <img src={item.img} alt="" />
                                 <Box>{item.nome}</Box>
                             </Box>
@@ -111,19 +113,19 @@ const Apresentacao = () => {
                 </Box>
             </Box>
             <Box className='podcasts-home'>
-                <Box className='livros-img'>
+                <Box className='podcasts-img'>
                     <Typography gutterBottom variant="h3">
                         Podcasts
                     </Typography>
                     <Typography gutterBottom variant="h6">
                         Podcasts que agregam ao conhecimento
                     </Typography>
-                    <Box style={{ display: 'flex' }}>
+                    <Box style={{ display: 'flex' }} className='podcast-list'>
                         {podcasts.map((item, index) => (
-                                <Box className='livros'>
-                                    <img src={item.img} alt="" />
-                                    <Box>{item.nome}</Box>
-                                </Box>
+                            <Box className='podcasts' key={index}>
+                                <img src={item.img} alt="" />
+                                <Box>{item.nome}</Box>
+                            </Box>
                         ))}
                     </Box>
                 </Box>

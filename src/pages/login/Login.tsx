@@ -66,6 +66,34 @@ function Login() {
                 });
         }
     }
+    async function onSubmit2(e: string) {
+        if(e === 'Enter') {
+            try {
+                await login(`auth/logar`, userLogin, setToken )
+                toast.success('Usuário logado com sucesso!', {
+                    position: "top-right",
+                    autoClose: 2000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: false,
+                    draggable: false,
+                    theme: "colored",
+                    progress: undefined,
+                    });
+            } catch(error) {
+                toast.error('Dados do usuário inconsistentes. Erro ao logar!', {
+                    position: "top-right",
+                    autoClose: 2000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: false,
+                    draggable: false,
+                    theme: "colored",
+                    progress: undefined,
+                    });
+            }
+        }
+    }
 
     return (
         <Grid className='container-login'>
@@ -78,7 +106,16 @@ function Login() {
 
                     <TextField id='usuario' className='input' type='text' value={userLogin.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updateModel(e)} placeholder='E-mail' name='usuario' />
 
-                    <TextField id='senha' className='input' value={userLogin.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updateModel(e)} placeholder='Senha' name='senha' type='password' />
+                    <TextField 
+                        id='senha' 
+                        className='input' 
+                        value={userLogin.senha} 
+                        onChange={(e: ChangeEvent<HTMLInputElement>) => updateModel(e)} 
+                        placeholder='Senha' 
+                        name='senha' 
+                        type='password'
+                        onKeyUp={(e: React.KeyboardEvent<HTMLInputElement>) => onSubmit2}
+                    />
 
                     <Box className="entrarArea">
                         <Button className='button' type='submit'>

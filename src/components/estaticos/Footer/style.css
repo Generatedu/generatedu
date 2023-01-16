@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nixie+One&family=Oswald:wght@300&display=swap');
 
 .footer {
-    width: 100vw; height: 200px;
+    width: 100vw; min-height: 40vh;
     background: linear-gradient(black, rgb(59, 59, 59));
     display: flex;
     justify-content: space-around;
@@ -57,4 +57,24 @@
 .footer img {
     width: 30px;
     margin: 5px;
+}
+
+.line {
+    width: 80vw;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(0,0,0,0), white, rgba(0,0,0,0));
+    margin-top: 10px;
+    display: none;
+}
+
+@media (max-width: 700px) {
+    .footer {
+        flex-direction: column;
+    }
+    .footer .redesSociais {
+        text-align: center;
+    }
+    .line {
+        display: block;
+    }
 }

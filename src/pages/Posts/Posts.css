@@ -2,7 +2,6 @@
 }
 
 .caixa {
-    
     z-index: 2;
 }
 
@@ -34,5 +33,14 @@
 }
 
 .fundoImg-postModal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+@media (max-width: 700px) {
+    .bemVindoArea {
+        min-height: 200px; min-width: 90vw;
+        text-align: center;
+    }
 }
