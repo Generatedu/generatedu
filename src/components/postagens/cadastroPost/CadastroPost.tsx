@@ -9,12 +9,14 @@ import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/TokensReducer';
 import { Box } from '@mui/material';
 import { toast } from 'react-toastify';
+import User from '../../../models/User';
 
 
 function CadastroPost() {
     let navigate = useNavigate();
     const { id } = useParams<{ id: string }>();
     const [temas, setTemas] = useState<Tema[]>([])
+    const [users, setUsers] = useState<User[]>([])
     const token = useSelector<TokenState, TokenState["tokens"]>(
         (state) => state.tokens
     );
@@ -42,21 +44,35 @@ function CadastroPost() {
             educacao: '',
             serie: ''
         })
+
+        const [user, setUser] = useState<User>(
+            {
+                id: 0,
+                nome: '',
+                usuario: '',
+                senha: '',
+                foto: ''
+             }) 
+
+    
+
     const [postagem, setPostagem] = useState<Postagem>({
         id: 0,
         titulo: '',
         conteudo: '',
         data_hora: '',
         curtida: 0,
-        tema: null
+        tema: null,
+        usuario: null
     })
 
     useEffect(() => {
         setPostagem({
             ...postagem,
-            tema: tema
+            tema: tema,
+            usuario: user
         })
-    }, [tema])
+    }, [tema, user])
 
     useEffect(() => {
         getTemas()
@@ -67,6 +83,21 @@ function CadastroPost() {
 
     async function getTemas() {
         await busca("/temas", setTemas, {
+            headers: {
+                'Authorization': token
+            }
+        })
+    }
+
+    useEffect(() => {
+        getUsers()
+        if (id !== undefined) {
+            findByIdPostagem(id)
+        }
+    }, [id])
+
+    async function getUsers() {
+        await busca("/usuarios/all", setUsers, {
             headers: {
                 'Authorization': token
             }
@@ -86,7 +117,8 @@ function CadastroPost() {
         setPostagem({
             ...postagem,
             [e.target.name]: e.target.value,
-            tema: tema
+            tema: tema,
+            usuario: user
         })
 
     }
@@ -144,11 +176,15 @@ function CadastroPost() {
     return (
         <Container maxWidth="sm" className="topo">
             <form onSubmit={onSubmit}>
-                <Typography variant="h3" color="textSecondary" component="h1" align="center" >Cadastrar Postagem</Typography>
-                <TextField value={postagem.titulo} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="titulo" label="titulo" variant="outlined" name="titulo" margin="normal" fullWidth />
-                <TextField value={postagem.conteudo} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="conteudo" label="conteudo" name="conteudo" variant="outlined" margin="normal" fullWidth />
-                <TextField value={postagem.data_hora} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="data_hora" label="data e hora" name="data_hora" variant="outlined" margin="normal" fullWidth />
-                <TextField value={postagem.curtida} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="curtida" label="curtida" name="curtida" variant="outlined" margin="normal" fullWidth />
+            <Box className='alinhamento'>
+                <img className='cadastrar' src='https://cdn-icons-png.flaticon.com/512/7263/7263985.png'></img>
+                <Typography variant="h3" className='fontes' component="h1" align="center" >Cadastrar Postagem</Typography>
+                </Box>
+                
+                <TextField value={postagem.titulo} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="titulo" label="Título" variant="outlined" name="titulo" margin="normal" fullWidth />
+                <TextField value={postagem.conteudo} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="conteudo" label="Conteúdo" name="conteudo" variant="outlined" margin="normal" fullWidth />
+                <TextField value={postagem.data_hora} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="data_hora" label="Data e hora" name="data_hora" variant="outlined" margin="normal" fullWidth />
+                <TextField value={postagem.curtida} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="curtida" label="Curtida" name="curtida" variant="outlined" margin="normal" fullWidth />
 
                 <FormControl >
                     <InputLabel id="demo-simple-select-helper-label">Tema </InputLabel>
@@ -166,11 +202,30 @@ function CadastroPost() {
                             ))
                         }
                     </Select>
+                    <FormControl>
+                    <InputLabel id="demo-simple-select-helper-label">Usuário</InputLabel>
+                    <Select
+                        labelId="demo-simple-select-helper-label"
+                        id="demo-simple-select-helper"
+                        onChange={(e) => buscaId(`/usuarios/${e.target.value}`, setUser, {
+                            headers: {
+                                'Authorization': token
+                            }
+                        })}>
+                        {
+                            users.map(user => (
+                                <MenuItem value={user.id}>{user.nome}</MenuItem>
+                            ))
+                        }
+                    </Select>
+                    </FormControl>
+                  
                     <FormHelperText>Escolha um tema para a postagem</FormHelperText>
                     <Button type="submit" variant="contained" color="primary">
                         Finalizar
                     </Button>
                 </FormControl>
+                
             </form>
         </Container>
     )

@@ -84,7 +84,7 @@ function CadastroUsuario() {
                     <form onSubmit={onSubmit}>
                         <img src="https://media.discordapp.net/attachments/1022847836406165517/1049076028527616002/c-removebg-preview.png" alt="" className="logoLogin" />
 
-                        <Typography variant='h4'>Cadastre-se</Typography>
+                        <Typography variant='h3' className='fontes'>Cadastre-se</Typography>
                         <Typography variant='h6'>E transforme sua qualidade de ensino</Typography>
 
                         <TextField className='inputArea' value={user.nome} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='nome' placeholder='Nome' name='nome' />
@@ -95,19 +95,19 @@ function CadastroUsuario() {
 
                         <TextField className='inputArea' value={user.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='senha' type='password' placeholder='Senha' name='senha' />
 
-                        <TextField className='inputArea' value={confirmarSenha} onChange={(e: ChangeEvent<HTMLInputElement>) => confirmarSenhaHandle(e)} id='senha' type='password' placeholder='Confirmar Senha' name='senha' />
+                        <TextField className='inputArea' value={confirmarSenha} onChange={(e: ChangeEvent<HTMLInputElement>) => confirmarSenhaHandle(e)} id='senha' type='password' placeholder='Confirmar senha' name='senha' />
 
-                        <TextField className='inputArea' value={user.foto} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='foto' placeholder='foto link' name='foto' />
+                        <TextField className='inputArea' value={user.foto} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='foto' placeholder='Foto (link)' name='foto' />
 
 
 
                         <Box marginTop={2} textAlign='center' className='cadastroControler'>
                             <Link to='/login' className='text-decorator-none'>
-                                <Box className='btnCancelar'>
+                                <Box className='btnCancelar hover'>
                                     CANCELAR
                                 </Box>
                             </Link>
-                            <Button type='submit' variant="contained" className='buttonCadastro'>
+                            <Button type='submit' variant="contained" className='buttonCadastro hover'>
                                 Cadastrar
                             </Button>
                         </Box>

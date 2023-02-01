@@ -50,9 +50,10 @@ function ListaTema() {
     }, [temas.length])
 
     return (
+        <Box className='fundotema'>
         <Box className='temas-container'>
             <Box className='temasTitle'>
-                <Typography variant='h2'>Temas</Typography>
+                <Typography variant='h2' className='fontes'>Temas</Typography>
             </Box>
             <Box className='temaList'>
                 {temas.length <= 0 &&
@@ -99,6 +100,7 @@ function ListaTema() {
                     ))
                 }
             </Box>
+        </Box>
         </Box>
     );
 }

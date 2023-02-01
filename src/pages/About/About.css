@@ -22,7 +22,6 @@
     min-height: 100vh;
     width: 100vw;
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
 }
@@ -30,8 +29,8 @@
 .container-About .our-mission img {
     width: 350px;
     border-top-left-radius: 200px;
-    border-top-right-radius: 300px;
-    border-bottom-left-radius: 300px;
+    border-top-right-radius: 200px;
+    border-bottom-left-radius: 200px;
     border-bottom-right-radius: 200px;
     margin: 50px;
 }
@@ -52,6 +51,7 @@
     align-items: center;
     margin-bottom: 100px;
     border-top: 1px solid black;
+    
 }
 
 .eachIntegrante {
@@ -113,7 +113,7 @@
 .memberCurriculo {
     width: 100px;
     height: 35px;
-    background-color: rgb(64, 64, 253);
+    background-color: rgb(18, 18, 18);
     color: white;
     border-radius: 3px;
     display: flex;
@@ -137,7 +137,7 @@
     width: 100vw;
     height: 100vh;
     position: fixed;
-    background-color: rgba(255, 255, 255, .8);
+    background-color: rgba(24, 23, 23, 0.8);
     z-index: 1;
 }
 
@@ -183,4 +183,22 @@
         color: white;
         text-decoration-line: underline;
     }
+}
+
+.laranja{
+    color:  rgba(230, 128, 21, 1);
+    text-decoration: underline;
+}
+
+.branco{
+    color: white;
+}
+
+.botaozao{
+    display: flex;
+}
+
+.meio{
+    display: flex;
+    align-items: center;
 }

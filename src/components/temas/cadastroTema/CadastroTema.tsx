@@ -1,4 +1,4 @@
-import { Button, Container, TextField, Typography } from "@material-ui/core";
+import { Box, Button, Container, TextField, Typography } from "@material-ui/core";
 import { ChangeEvent, Dispatch, useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
@@ -107,9 +107,12 @@ function CadastroTema() {
     return (
         <Container className="topo">
             <form onSubmit={onSubmit}>
-                <Typography variant="h3" color="textSecondary" component="h1" align="center" >Formulário de cadastro tema</Typography>
-                <TextField value={tema.educacao} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedTema(e)} id="educacao" label="educacao" variant="outlined" name="educacao" margin="normal" fullWidth />
-                <TextField value={tema.serie} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedTema(e)} id="serie" label="serie" variant="outlined" name="serie" margin="normal" fullWidth />
+                <Box className='alinhamento'>
+                <img className='cadastrar' src='https://cdn-icons-png.flaticon.com/512/7263/7263985.png'></img>
+                <Typography variant="h3" className='fontes' component="h1" align="center" >Cadastrar Tema</Typography>
+                </Box>
+                <TextField value={tema.educacao} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedTema(e)} id="educacao" label="Educação" variant="outlined" name="educacao" margin="normal" fullWidth />
+                <TextField value={tema.serie} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedTema(e)} id="serie" label="Série" variant="outlined" name="serie" margin="normal" fullWidth />
                 <Button type="submit" variant="contained" color="primary">
                     Finalizar
                 </Button>

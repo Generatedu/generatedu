@@ -24,11 +24,13 @@ const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     paper: {
       position: 'absolute',
+      height: 600,  
       width: 400,
       backgroundColor: theme.palette.background.paper,
       border: '2px solid #000',
       boxShadow: theme.shadows[5],
       padding: theme.spacing(2, 4, 3),
+      borderRadius: '50px'
     },
   }),
 );
@@ -62,7 +64,7 @@ function ModalPostagem () {
     <Box>
       <Button
         variant="outlined"
-        className="btnModal"
+        className="btnModalPost hover"
         onClick={handleOpen}>Nova Postagem</Button>
       <Modal
         open={open}

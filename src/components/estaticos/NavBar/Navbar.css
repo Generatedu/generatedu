@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Nixie+One&family=Oswald:wght@300&display=swap');
 
 .nav {
-    min-width: 100vw; height: 8vh;
-    background: linear-gradient(rgba(221, 20, 80, 1), rgba(230, 128, 21, 1));
+    min-width: 100vw; height: 10vh;
+    background: linear-gradient(#dd1450, rgb(230, 128, 21));
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     font-family: 'Nixie One', cursive;
     font-family: 'Oswald', sans-serif;
@@ -23,7 +23,7 @@
 
 .a {
     text-decoration: none;
-    margin: 30px;
+    margin: 10px;
     height: 60px;
     width: 80px;
     display: flex;
@@ -70,7 +70,7 @@
 
     .nav-list {
         position: absolute;
-        top: 8vh;
+        top: 10vh;
         right: 0;
         width: 70vw;
         height: 94vh;

@@ -102,7 +102,7 @@ function Login() {
                     <img src="https://media.discordapp.net/attachments/1022847836406165517/1049076028527616002/c-removebg-preview.png" alt="" className="logoLogin" />
                     <Typography variant='h4'>GENERATEDU</Typography>
                     <Box className='span'>Entre na estrada do conhecimento</Box>
-                    <Typography variant='h5' className='h5'>Login</Typography>
+                    <Typography variant='h5' className='h5 fontes'>Login</Typography>
 
                     <TextField id='usuario' className='input' type='text' value={userLogin.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updateModel(e)} placeholder='E-mail' name='usuario' />
 
@@ -118,10 +118,10 @@ function Login() {
                     />
 
                     <Box className="entrarArea">
-                        <Button className='button' type='submit'>
+                        <Button className='button hover' type='submit'>
                             Entrar
                         </Button>
-                        <Box>
+                        <Box className='hover'>
                             <a href="/cadastrousuario">Cadastre-se!</a>
                         </Box>
                     </Box>

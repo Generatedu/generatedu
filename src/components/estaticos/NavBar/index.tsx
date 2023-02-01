@@ -87,8 +87,7 @@ function Navbar() {
                     <Box >Logout</Box>
                 </Link>
             </ul>
-            <input className='input' placeholder='pesquisar' />
-            <Box className='nav-list' style={{ transform: active }}>
+                 <Box className='nav-list' style={{ transform: active }}>
                 <Link to="/home" className="a">
                     <HomeRounded />
                     <Box onClick={() => (showResponseMenu2(), changeAnimModule())} >Home</Box>

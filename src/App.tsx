@@ -20,6 +20,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Posts from './pages/Posts/Posts';
 
+
 function App() {
   return (
     <Provider store={store}>

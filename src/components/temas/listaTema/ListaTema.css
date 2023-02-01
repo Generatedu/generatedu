@@ -20,7 +20,12 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    border: 1px solid black;
+    border: 1px solid rgb(0, 0, 0);
     margin: 10px;
-    box-shadow: 1px 1px 4px black;
+    box-shadow: 1px 1px 4px rgb(0, 0, 0);
+    
+}
+.fundotema{
+background-image: url(https://media.discordapp.net/attachments/1014218248998367252/1070097072633688234/Design_sem_nome_2.jpg?width=832&height=468);
+background-position: center;
 }

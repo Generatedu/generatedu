@@ -39,8 +39,8 @@ function Posts() {
             <Grid container direction="row" justifyContent="center" alignItems="center" className='caixa' >
                 <Grid alignItems="center" item xs={6} style={{ zIndex: '2' }}>
                     <Box paddingX={20} style={{ zIndex: '2' }} className="bemVindoArea">
-                        <Typography variant="h4" gutterBottom color="textPrimary" component="h3" align="center" className='titulo'>Seja bem vindo(a)!</Typography>
-                        <Typography variant="h6" gutterBottom color="textPrimary" component="h5" align="center" className='titulo'>expresse aqui os seus pensamentos e opiniões!</Typography>
+                        <Typography variant="h4" gutterBottom color="textPrimary" component="h3" align="center" className='titulo'></Typography>
+                        <Typography variant="h6" gutterBottom color="textPrimary" component="h5" align="center" className='titulo'>Ajude-nos a melhorar a qualidade de ensino</Typography>
                         <Box className="buttonAreaPosts">
                             <ModalPostagem />
                             <ModalTema />
@@ -48,7 +48,7 @@ function Posts() {
                     </Box>
                 </Grid>
                 <Box className="fundoImg-postModal">
-                    <img src="https://media.tutormundi.com/wp-content/uploads/2020/07/30132806/sala-de-aula-invertida-min-1-1.png" alt="" width="500px" height="500px" />
+                    <img src="https://scontent.fsdu7-1.fna.fbcdn.net/v/t31.18172-8/21014136_1540925725964606_8011355081135325967_o.jpg?_nc_cat=106&ccb=1-7&_nc_sid=730e14&_nc_ohc=B5wnrBfHoZ0AX-biZwr&_nc_ht=scontent.fsdu7-1.fna&oh=00_AfD_FQiuLyiqIosmxKaar-FcNaosUxDFobgSDX-TJLZRdw&oe=63FFD74A" alt="" width="500px" height="500px" />
                 </Box>
                 <Grid xs={12} className='postagens' >
                     <TabPostagem />

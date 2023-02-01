@@ -16,6 +16,7 @@
     box-shadow: 1px 1px 5px black;
     margin-left: 50%;
     z-index: 4;
+    border-radius: 50px;
 }
 
 .contact .logoArea {
@@ -66,7 +67,7 @@
 }
 
 .cadastroArea form .buttonCadastro:hover {
-    background:  rgb(196, 102, 1);
+    background:  rgb(225, 101, 0);
 }
 
 textarea {

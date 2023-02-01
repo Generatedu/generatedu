@@ -9,21 +9,23 @@
     margin-top: 100px;
 }
 .titulo-list-post {
-    font-weight: bold;
+    font-weight: lighter;
     font-size: 20px;
 }
 .card {
-    min-width: 60vw;
+    width: 55vw;
     margin-top: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-direction:column;
     box-shadow: 1px 1px 4px black;
 }
 .actions-list-post {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    padding: 0px;
+    margin: 0px;
 }
 .content-list-post {
     display: flex;
@@ -79,5 +81,23 @@
     width: 100vw;
     display: flex;
     justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+.nomeCards{
+    text-transform: 'capitalize' !important;
+    font-size: large !important;
+    font-weight: bold !important;
+    font-family: cursive !important;
+}
+
+.imgCards{
+    width: 100%;
+    border-radius: 10%;
+}
+
+.fotonapostagem{
+    display: flex;
     align-items: center;
 }

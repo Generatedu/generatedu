@@ -40,19 +40,19 @@ const Apresentacao = () => {
             <Box className='homeDegrade'>
                 <Typography variant='h5'>A Nossa Missão é</Typography>
                 <Typography variant='h3'>GERAR RESULTADOS</Typography>
-                <Typography variant='h6'>Uma rede social que motiva alunos e professores a compartilharem idéias e ensinamentos.</Typography>
-                <Link to="/postagem" className="linkPost"><Box className='showPost'>Ver Postagens</Box></Link>
+                <Typography variant='h6'>Uma rede social que motiva alunos e professores a compartilharem ideias e ensinamentos.</Typography>
+                <Link to="/posts" className="linkPost"><Box className='showPost hover'>Ver Postagens</Box></Link>
             </Box>
             <img className='homeImg' src="https://media.discordapp.net/attachments/1012745470659010570/1054415218903634000/Leitura_Brasil_Header.webp" alt="" />
             <Box className='hHome'>
                 <Box className='generateduBox'>
-                    <Typography variant='h3'>Somos a Generatedu</Typography>
+                    <Typography variant='h3' className='fontes'>Somos a Generatedu</Typography>
                     <Typography variant='h6'>A rede social que gera educação</Typography>
                 </Box>
             </Box>
 
             <Box className='conteudos-home'>
-                <Link to="/postagem" className='link-home-content'>
+                <Link to="/posts" className='link-home-content'>
                     <Card sx={{ maxWidth: 300 }}>
                         <CardMedia
                             component="img"
@@ -61,11 +61,11 @@ const Apresentacao = () => {
                             alt="green iguana"
                         />
                         <CardContent>
-                            <Typography gutterBottom variant="h5">
+                            <Typography gutterBottom variant="h5" className='fontes'>
                                 Postagens
                             </Typography>
                             <Typography variant="body2" color="text.secondary">
-                                Compartilhe suas idéias e ensinamentos, tire duvidas e melhore sua didática vendo opniões de alunos e professores.
+                                Compartilhe suas ideias e ensinamentos, tire dúvidas e melhore sua didática vendo opiniões de alunos e professores.
                             </Typography>
                         </CardContent>
                     </Card>
@@ -79,11 +79,11 @@ const Apresentacao = () => {
                             alt="green iguana"
                         />
                         <CardContent>
-                            <Typography gutterBottom variant="h5">
+                            <Typography gutterBottom variant="h5" className='fontes'>
                                 Sobre
                             </Typography>
                             <Typography variant="body2" color="text.secondary">
-                                Venha conhecer mais sobre a Generatedu e conheça também a equipe que tornou tudo isso possivel.
+                                Venha conhecer mais sobre a Generatedu e conheça também a equipe que tornou tudo isso possível.
                             </Typography>
                         </CardContent>
                     </Card>
@@ -96,7 +96,7 @@ const Apresentacao = () => {
                     <img src="https://conteudo.imguol.com.br/c/entretenimento/9d/2019/04/22/como-voce-vai-comemorar-o-dia-do-livro-1555959523311_v2_450x450.jpg" alt="" className='lendo-livro' />
                 </Box>
                 <Box className='livros-img'>
-                    <Typography gutterBottom variant="h4">
+                    <Typography gutterBottom variant="h3" className='fontes margem'>
                         Livros
                     </Typography>
                     <Typography gutterBottom variant="h6">
@@ -114,7 +114,7 @@ const Apresentacao = () => {
             </Box>
             <Box className='podcasts-home'>
                 <Box className='podcasts-img'>
-                    <Typography gutterBottom variant="h3">
+                    <Typography gutterBottom variant="h3" className='fontes'>
                         Podcasts
                     </Typography>
                     <Typography gutterBottom variant="h6">

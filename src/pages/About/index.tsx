@@ -23,31 +23,31 @@ const About = () => {
         <Box className='container-About' data-aos="fade-up">
             <Box className='fundoAboutImg'>
                 <Box className='transparentAbout'></Box>
-                <img src="https://www.10wallpaper.com/wallpaper/1366x768/1604/Bustling_Cities_Scenery_Photo_HD_Wallpaper_03_1366x768.jpg" alt="" />
+                <img src="https://www.engenhariaradio.pt/wp-content/uploads/2021/02/alfons-morales-ylswjsy7stw-unsplash-1536x901.jpg" alt="" />
             </Box>
             <Box className='conteudoAbout'>
                 <Box className='ourMissionArea'>
-                    <Box className='our-mission'>
+                    <Box className='our-mission meio'>
                         <Box>
-                            <Typography variant='h4'>Sobre nós</Typography>
-                            <Box>Somos um grupo de jovens que participam de um
+                            <Typography variant='h4' className='fontes laranja'>Sobre nós</Typography>
+                            <Box className='branco'>Somos um grupo de jovens que participam de um
                                 Bootcamp da Generation, promovido por um projeto da
                                 Prefeitura do Rio de Janeiro - Programadores Cariocas.
                                 Visando o conhecimento na área do desenvolvimento na
                                 tecnologia.</Box>
                         </Box>
                         <Box>
-                            <img src="./images/imagens/ensino.jpg" alt="" />
+                            <img src="https://cdn.discordapp.com/attachments/1014218248998367252/1069710778090913883/logogeneratedu.png" alt="" />
                         </Box>
                     </Box>
-                    <Box className='our-mission'>
+                    <Box className='our-mission meio'>
                         <Box>
-                            <img src="./images/imagens/projetoMake.jpg" alt="" />
+                            <img src="https://microsistec.com.br/wp-content/uploads/time-unido.jpg" alt="" />
                         </Box>
                         <Box>
-                            <Typography variant='h4'>Nossa Missão</Typography>
-                            <Box>Nossa missão e visão através do nosso projeto
-                                GENERATEDU - GERAR EDUCAÇÃO. É propor uma rede
+                            <Typography variant='h4' className='fontes laranja'>Nossa Missão</Typography>
+                            <Box className='branco'>Nossa missão e visão através do nosso projeto
+                                GENERATEDU - GERAR EDUCAÇÃO é propor uma rede
                                 voltada ao público de alunos e professores da rede
                                 pública, fazendo o compartilhamento de pensamentos,
                                 feedbacks e ideias inovadoras para os métodos de
@@ -59,7 +59,7 @@ const About = () => {
                     </Box>
                 </Box>
                 <Box className='integrantes'>
-                    <Box className='integranteaTitulo'><h2>Integrantes</h2></Box>
+                    <Box className='integranteaTitulo fontes laranja'><h1>Integrantes</h1></Box>
                     {integrantes.map((item, index) => (
                         <>
                             {
@@ -69,15 +69,17 @@ const About = () => {
                                             <img src={item.img} alt="" />
                                         </Box>
                                         <Box className='eachIntegranteInfo'>
-                                            <Typography variant='h5'>{item.name}</Typography>
+                                            <Typography className='fontes' variant='h4'>{item.name}</Typography>
                                             <Box>{item.descricao}</Box>
 
+                                            <Box className='botaozao'>
                                             <Box className='memberCurriculo'>
                                                 <a href={item.linkedin} target="_blank">Linkedin</a>
                                             </Box>
 
                                             <Box className='memberCurriculo'>
                                                 <a href={item.github} target="_blank">Github</a>
+                                            </Box>
                                             </Box>
                                         </Box>
                                     </Box>
@@ -85,15 +87,17 @@ const About = () => {
                                     <Box className='eachIntegrante'  key={index}>
 
                                         <Box className='eachIntegranteInfo'>
-                                            <Typography variant='h5'>{item.name}</Typography>
+                                            <Typography className='fontes'   variant='h4'>{item.name}</Typography>
                                             <Box>{item.descricao}</Box>
 
+                                            <Box className="botaozao">
                                             <Box className='memberCurriculo'>
                                                 <a href={item.linkedin} target="_blank">Linkedin</a>
                                             </Box>
 
                                             <Box className='memberCurriculo'>
                                                 <a href={item.github} target="_blank">Github</a>
+                                            </Box>
                                             </Box>
                                         </Box>
 

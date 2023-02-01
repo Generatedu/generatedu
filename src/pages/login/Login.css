@@ -7,8 +7,6 @@
     color: white;
 }
 
-/* Novos */
-
 
 .loginArea {
     height: 80vh; width: 40vw;
@@ -60,6 +58,11 @@
 .entrarArea a {
     text-decoration: none;
     color: white;
+}
+
+
+.hover:hover{
+    filter: drop-shadow(0 0 10px white);
 }
 
 .fundoImg1 {

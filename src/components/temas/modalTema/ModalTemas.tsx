@@ -3,10 +3,9 @@ import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
 import {Button} from "@material-ui/core"
 import CloseIcon from '@material-ui/icons/Close';
-
 import {Box} from '@mui/material';
 import CadastroTema from '../cadastroTema/CadastroTema';
-
+import './ModalTema.css'
 
 function getModalStyle() {
   const top = 50 ;
@@ -23,11 +22,13 @@ const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     paper: {
       position: 'absolute',
+      height: 300,
       width: 400,
       backgroundColor: theme.palette.background.paper,
       border: '2px solid #000',
       boxShadow: theme.shadows[5],
       padding: theme.spacing(2, 4, 3),
+      borderRadius: '50px'
     },
   }),
 );
@@ -46,7 +47,7 @@ function ModalTema () {
   };
 
   const body = (
-    <div style={modalStyle} className={classes.paper}>
+    <Box style={modalStyle} className={classes.paper}>
       <Box display="flex" justifyContent="flex-end" className="cursor">
         <CloseIcon onClick={handleClose}/>
       
@@ -54,14 +55,14 @@ function ModalTema () {
       
       <CadastroTema/>
       
-    </div>
+    </Box>
   );
 
   return (
     <div>
       <Button
         variant="outlined"
-        className="btnModal"
+        className="btnModalTema hover"
         onClick={handleOpen}>Novo Tema</Button>
       <Modal
         open={open}
